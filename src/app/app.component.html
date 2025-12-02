@@ -1,0 +1,23 @@
+<div class="container">
+    <header>
+        <h1>🥊 Fitboxing 🥊</h1>
+        <p class="subtitle">Entraînez-vous avec style et rythme</p>
+        <h2 class="session-title" *ngIf="sessionTitle">{{ sessionTitle }}</h2>
+    </header>
+
+    <main>
+        <div class="rounds-container">
+            <div *ngFor="let challenge of challenges" class="round-card">
+                <h2>{{ challenge.title }}</h2>
+                <div class="sequence">
+                    <div *ngFor="let round of challenge.sequence; let i = index" class="round-item">
+                        <span class="round-name">{{ round.move }}</span>
+                        <span class="timing" [class.double-timing]="round.timing === 2">
+                            {{ round.timing === 1 ? '+' : '++' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
