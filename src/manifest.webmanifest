@@ -6,8 +6,8 @@
   "background_color": "#764ba2",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/fitboxing/",
+  "start_url": "/fitboxing/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
