@@ -1,4 +1,16 @@
-<div class="container">
+<div class="container" [class.refreshing]="isRefreshing">
+    <!-- Indicateur de refresh -->
+    <div class="pull-refresh-indicator" [style.transform]="'translateX(-50%) translateY(' + (pullDistance - 60) + 'px)'"
+        [class.active]="pullDistance >= PULL_THRESHOLD">
+        <div class="spinner" *ngIf="isRefreshing">
+            <div class="spinner-circle"></div>
+        </div>
+        <div class="pull-text" *ngIf="!isRefreshing">
+            <span *ngIf="pullDistance < PULL_THRESHOLD">⬇️ Tirez pour actualiser</span>
+            <span *ngIf="pullDistance >= PULL_THRESHOLD">🔓 Relâchez pour actualiser</span>
+        </div>
+    </div>
+
     <header>
         <h1>🥊 Fitboxing 🥊</h1>
         <p class="subtitle">Entraînez-vous avec style et rythme</p>
