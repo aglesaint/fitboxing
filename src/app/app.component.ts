@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
 
     // État du pull-to-refresh
     isRefreshing = false;
+    isLoading = false; // Flag pour empêcher les requêtes concurrentes
     pullDistance = 0;
     startY = 0;
     isPulling = false;
@@ -29,11 +30,28 @@ export class AppComponent implements OnInit {
     }
 
     loadData(): void {
-        this.roundsService.getAllRoundsData().subscribe((data: RoundsData) => {
-            this.sessionTitle = data.title;
-            this.challenges = data.rounds;
-            this.isRefreshing = false;
-            this.pullDistance = 0;
+        // Empêcher les requêtes concurrentes
+        if (this.isLoading) {
+            return;
+        }
+
+        // Marquer comme en cours de chargement
+        this.isLoading = true;
+
+        this.roundsService.getAllRoundsData().subscribe({
+            next: (data: RoundsData) => {
+                this.sessionTitle = data.title;
+                this.challenges = data.rounds;
+                this.isRefreshing = false;
+                this.isLoading = false;
+                this.pullDistance = 0;
+            },
+            error: (error) => {
+                console.error('Error loading data:', error);
+                this.isRefreshing = false;
+                this.isLoading = false;
+                this.pullDistance = 0;
+            }
         });
     }
 
@@ -47,7 +65,7 @@ export class AppComponent implements OnInit {
 
     @HostListener('touchmove', ['$event'])
     onTouchMove(event: TouchEvent): void {
-        if (!this.isPulling || this.isRefreshing) return;
+        if (!this.isPulling || this.isLoading) return;
 
         const currentY = event.touches[0].clientY;
         const deltaY = currentY - this.startY;
@@ -63,7 +81,7 @@ export class AppComponent implements OnInit {
 
     @HostListener('touchend', ['$event'])
     onTouchEnd(): void {
-        if (this.pullDistance >= this.PULL_THRESHOLD && !this.isRefreshing) {
+        if (this.pullDistance >= this.PULL_THRESHOLD && !this.isLoading) {
             this.isRefreshing = true;
             this.loadData();
         } else {
@@ -72,4 +90,3 @@ export class AppComponent implements OnInit {
         this.isPulling = false;
     }
 }
-
