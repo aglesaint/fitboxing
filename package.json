@@ -9,7 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "npm run build:github && npx angular-cli-ghpages --dir=dist/fitboxing/browser",
-    "generate-icons": "node scripts/generate-icons.mjs"
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "generate-all-icons": "node scripts/generate-all-icons.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,40 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="gloveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Fond avec dégradé -->
-  <rect width="512" height="512" fill="url(#bgGradient)" rx="80"/>
-  
-  <!-- Gant de boxe centré et agrandi -->
-  <g transform="translate(128, 100)">
-    <!-- Corps principal du gant -->
-    <ellipse cx="128" cy="200" rx="110" ry="140" fill="url(#gloveGradient)" stroke="#654321" stroke-width="8"/>
-    
-    <!-- Partie supérieure du gant -->
-    <ellipse cx="128" cy="125" rx="90" ry="80" fill="#A0522D" stroke="#654321" stroke-width="6"/>
-    
-    <!-- Lanière/fermeture -->
-    <rect x="90" y="110" width="76" height="12" fill="#654321" rx="4"/>
-    <rect x="100" y="122" width="56" height="8" fill="#654321" rx="2"/>
-    
-    <!-- Détails de couture -->
-    <line x1="100" y1="160" x2="156" y2="160" stroke="#654321" stroke-width="4" opacity="0.5"/>
-    <line x1="100" y1="185" x2="156" y2="185" stroke="#654321" stroke-width="4" opacity="0.5"/>
-    <line x1="100" y1="225" x2="156" y2="225" stroke="#654321" stroke-width="4" opacity="0.5"/>
-    
-    <!-- Poing fermé (partie visible) -->
-    <ellipse cx="128" cy="260" rx="50" ry="40" fill="#D2691E" opacity="0.6"/>
-    
-    <!-- Reflet/brillance -->
-    <ellipse cx="115" cy="135" rx="35" ry="25" fill="#CD853F" opacity="0.4"/>
-  </g>
-</svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000"
+ preserveAspectRatio="xMidYMid meet">
 
+<g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M4635 8559 c-506 -38 -884 -129 -1213 -291 -420 -207 -722 -540 -851
+-937 -75 -232 -96 -395 -95 -746 0 -453 54 -811 200 -1344 143 -521 356 -1031
+552 -1326 96 -143 148 -199 222 -234 l55 -26 1394 -3 c1221 -2 1402 0 1454 13
+75 19 105 41 164 118 26 34 116 143 198 242 520 621 723 905 890 1240 295 595
+310 1106 43 1492 -137 199 -380 334 -553 308 -64 -9 -96 -42 -125 -130 -44
+-138 -137 -283 -244 -383 -33 -31 -46 -51 -46 -71 0 -51 -40 -184 -79 -265
+-22 -45 -78 -143 -125 -219 -177 -284 -230 -431 -255 -705 -7 -76 -12 -97 -31
+-117 -32 -34 -92 -34 -125 0 -22 21 -25 33 -25 98 0 215 83 454 255 737 64
+104 149 270 142 276 -2 2 -35 -10 -73 -27 -179 -82 -400 -140 -639 -169 -132
+-16 -485 -28 -599 -20 -87 6 -101 9 -117 29 -27 33 -25 92 4 118 21 20 36 21
+337 26 320 5 417 14 606 56 133 29 236 66 354 127 284 147 479 374 567 661 25
+81 27 102 27 258 0 199 -16 277 -90 434 -75 159 -176 285 -319 396 -263 206
+-599 325 -1045 370 -186 19 -649 27 -815 14z"/>
+<path d="M3466 3408 c-56 -15 -120 -82 -134 -140 -16 -64 -17 -1016 -1 -1073
+15 -54 91 -129 146 -144 30 -8 443 -11 1480 -9 l1438 3 45 25 c65 37 100 92
+111 176 4 38 8 281 6 539 -2 526 0 509 -75 577 -22 20 -58 41 -79 47 -52 15
+-2882 13 -2937 -1z"/>
+<path d="M3680 1855 c0 -4 9 -22 20 -40 23 -37 65 -71 130 -106 l45 -24 1055
+0 1055 0 56 27 c51 25 149 111 149 130 0 4 -558 8 -1239 8 -682 0 -1246 3
+-1255 6 -9 3 -16 3 -16 -1z"/>
+</g>
+</svg>
