@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1764928148481,
+  "timestamp": 1764929405885,
   "index": "/fitboxing/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/fitboxing/favicon.svg",
         "/fitboxing/index.html",
-        "/fitboxing/main-UDKBVGUW.js",
+        "/fitboxing/main-NWDRJEJC.js",
         "/fitboxing/manifest.webmanifest",
         "/fitboxing/polyfills-FFHMD2TL.js",
-        "/fitboxing/styles-R7RQTQMK.css"
+        "/fitboxing/styles-LX3MZXLR.css"
       ],
       "patterns": []
     },
@@ -63,11 +63,11 @@
     "/fitboxing/assets/icons/web-app-manifest-192x192.png": "2efdb1edc666c793e1218147d5829705cbd189e6",
     "/fitboxing/assets/icons/web-app-manifest-512x512.png": "12fd97b1ab9424cb6d333e9cc33b7a3269affefd",
     "/fitboxing/favicon.svg": "ebc73ba6b30525c6f4c9550cd3ba9fb731bcbb48",
-    "/fitboxing/index.html": "eac063bb5318ef9dd458c578b4643f591b883e54",
-    "/fitboxing/main-UDKBVGUW.js": "e98fef1368ed93eeea10369e4e454609598d7273",
-    "/fitboxing/manifest.webmanifest": "d61760f930af1e30c481983922c540db578c9ce8",
+    "/fitboxing/index.html": "b3832a90f897f67ae75b28d40b0921f8c116cfe4",
+    "/fitboxing/main-NWDRJEJC.js": "b539f01f842a88f8f32716ad7a7da76b6702bbba",
+    "/fitboxing/manifest.webmanifest": "e5d0137c1836c64d82064d1254ff96377673971a",
     "/fitboxing/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/fitboxing/styles-R7RQTQMK.css": "36fdfc08e8b8a8d4cc8a0325eeefeacdf60a7b28"
+    "/fitboxing/styles-LX3MZXLR.css": "45cf6c2fd06eda9dead4159d36e2309c90c3438c"
   },
   "navigationUrls": [
     {
