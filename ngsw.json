@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1764754971983,
-  "index": "/index.html",
+  "timestamp": 1764926506737,
+  "index": "/fitboxing/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "/favicon.svg",
-        "/index.html",
-        "/main-V34LH7MP.js",
-        "/manifest.webmanifest",
-        "/polyfills-FFHMD2TL.js",
-        "/styles-R7RQTQMK.css"
+        "/fitboxing/favicon.svg",
+        "/fitboxing/index.html",
+        "/fitboxing/main-UDKBVGUW.js",
+        "/fitboxing/manifest.webmanifest",
+        "/fitboxing/polyfills-FFHMD2TL.js",
+        "/fitboxing/styles-R7RQTQMK.css"
       ],
       "patterns": []
     },
@@ -28,46 +28,46 @@
         "ignoreVary": true
       },
       "urls": [
-        "/assets/icons/apple-touch-icon.png",
-        "/assets/icons/favicon-96x96.png",
-        "/assets/icons/favicon.svg",
-        "/assets/icons/icon-128x128.png",
-        "/assets/icons/icon-144x144.png",
-        "/assets/icons/icon-152x152.png",
-        "/assets/icons/icon-192x192.png",
-        "/assets/icons/icon-384x384.png",
-        "/assets/icons/icon-512x512.png",
-        "/assets/icons/icon-72x72.png",
-        "/assets/icons/icon-96x96.png",
-        "/assets/icons/icon-template.svg",
-        "/assets/icons/web-app-manifest-192x192.png",
-        "/assets/icons/web-app-manifest-512x512.png"
+        "/fitboxing/assets/icons/apple-touch-icon.png",
+        "/fitboxing/assets/icons/favicon-96x96.png",
+        "/fitboxing/assets/icons/favicon.svg",
+        "/fitboxing/assets/icons/icon-128x128.png",
+        "/fitboxing/assets/icons/icon-144x144.png",
+        "/fitboxing/assets/icons/icon-152x152.png",
+        "/fitboxing/assets/icons/icon-192x192.png",
+        "/fitboxing/assets/icons/icon-384x384.png",
+        "/fitboxing/assets/icons/icon-512x512.png",
+        "/fitboxing/assets/icons/icon-72x72.png",
+        "/fitboxing/assets/icons/icon-96x96.png",
+        "/fitboxing/assets/icons/icon-template.svg",
+        "/fitboxing/assets/icons/web-app-manifest-192x192.png",
+        "/fitboxing/assets/icons/web-app-manifest-512x512.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/icons/apple-touch-icon.png": "9e899fe07122264b7ae948fb790a9f8300441f39",
-    "/assets/icons/favicon-96x96.png": "4f8dbce2e77a2aef72cb9bad1889b61dbb0623db",
-    "/assets/icons/favicon.svg": "05e3ac75386c23132075a5e7a6eefce1e1b28d53",
-    "/assets/icons/icon-128x128.png": "fd4f70d786e83ae26da66a4d683ab4889338cef2",
-    "/assets/icons/icon-144x144.png": "023b85626d1f350ecf6be9c633abc38294c7c62e",
-    "/assets/icons/icon-152x152.png": "10b82afa331c27e91e08bfd6fd29631c7466f668",
-    "/assets/icons/icon-192x192.png": "2417885954ee8f9de226231e5a3ceee21d6c16c0",
-    "/assets/icons/icon-384x384.png": "80a04be3221b8127bfca78eaebc4648b776ed9e7",
-    "/assets/icons/icon-512x512.png": "1f2e4fc6a09493768b58c245d67e59b9b2ef4bd9",
-    "/assets/icons/icon-72x72.png": "04c23972c7ed1f3332e7b6fdd034a065c33f885a",
-    "/assets/icons/icon-96x96.png": "cf6e6130cabfefe397fac779b7de9b152db65492",
-    "/assets/icons/icon-template.svg": "46893251b3d72e3086d29c2e9eb8432a7f880308",
-    "/assets/icons/web-app-manifest-192x192.png": "2efdb1edc666c793e1218147d5829705cbd189e6",
-    "/assets/icons/web-app-manifest-512x512.png": "12fd97b1ab9424cb6d333e9cc33b7a3269affefd",
-    "/favicon.svg": "7d7b2378e54f08971df1d31b25df9c1ac904ddc1",
-    "/index.html": "7d35932e909bc84866ca70b453eece505b826451",
-    "/main-V34LH7MP.js": "2d7a525c9bcdafc8e90ed13bdf98445e7ca3ac6b",
-    "/manifest.webmanifest": "d61760f930af1e30c481983922c540db578c9ce8",
-    "/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/styles-R7RQTQMK.css": "36fdfc08e8b8a8d4cc8a0325eeefeacdf60a7b28"
+    "/fitboxing/assets/icons/apple-touch-icon.png": "9e899fe07122264b7ae948fb790a9f8300441f39",
+    "/fitboxing/assets/icons/favicon-96x96.png": "4f8dbce2e77a2aef72cb9bad1889b61dbb0623db",
+    "/fitboxing/assets/icons/favicon.svg": "05e3ac75386c23132075a5e7a6eefce1e1b28d53",
+    "/fitboxing/assets/icons/icon-128x128.png": "fd4f70d786e83ae26da66a4d683ab4889338cef2",
+    "/fitboxing/assets/icons/icon-144x144.png": "023b85626d1f350ecf6be9c633abc38294c7c62e",
+    "/fitboxing/assets/icons/icon-152x152.png": "10b82afa331c27e91e08bfd6fd29631c7466f668",
+    "/fitboxing/assets/icons/icon-192x192.png": "2417885954ee8f9de226231e5a3ceee21d6c16c0",
+    "/fitboxing/assets/icons/icon-384x384.png": "80a04be3221b8127bfca78eaebc4648b776ed9e7",
+    "/fitboxing/assets/icons/icon-512x512.png": "1f2e4fc6a09493768b58c245d67e59b9b2ef4bd9",
+    "/fitboxing/assets/icons/icon-72x72.png": "04c23972c7ed1f3332e7b6fdd034a065c33f885a",
+    "/fitboxing/assets/icons/icon-96x96.png": "cf6e6130cabfefe397fac779b7de9b152db65492",
+    "/fitboxing/assets/icons/icon-template.svg": "46893251b3d72e3086d29c2e9eb8432a7f880308",
+    "/fitboxing/assets/icons/web-app-manifest-192x192.png": "2efdb1edc666c793e1218147d5829705cbd189e6",
+    "/fitboxing/assets/icons/web-app-manifest-512x512.png": "12fd97b1ab9424cb6d333e9cc33b7a3269affefd",
+    "/fitboxing/favicon.svg": "7d7b2378e54f08971df1d31b25df9c1ac904ddc1",
+    "/fitboxing/index.html": "eac063bb5318ef9dd458c578b4643f591b883e54",
+    "/fitboxing/main-UDKBVGUW.js": "e98fef1368ed93eeea10369e4e454609598d7273",
+    "/fitboxing/manifest.webmanifest": "d61760f930af1e30c481983922c540db578c9ce8",
+    "/fitboxing/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/fitboxing/styles-R7RQTQMK.css": "36fdfc08e8b8a8d4cc8a0325eeefeacdf60a7b28"
   },
   "navigationUrls": [
     {
