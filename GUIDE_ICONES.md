@@ -13,6 +13,7 @@ Ce guide explique comment modifier le favicon et mettre à jour toutes les icôn
 ### Étape 1 : Modifier le template
 
 Éditez le fichier **`src/assets/icons/icon-template.svg`** avec votre éditeur SVG préféré :
+
 - Inkscape (gratuit)
 - Adobe Illustrator
 - Figma
@@ -27,6 +28,7 @@ npm run generate-all-icons
 ```
 
 Ce script va :
+
 1. ✅ Copier le template vers `src/favicon.svg`
 2. ✅ Générer toutes les icônes PNG PWA (8 tailles)
 3. ✅ Créer les fichiers nécessaires pour la compatibilité
@@ -34,6 +36,7 @@ Ce script va :
 ### Étape 3 : Vérifier les résultats
 
 Après la génération, vérifiez que :
+
 - `src/favicon.svg` a été mis à jour
 - Les fichiers `icon-*.png` dans `src/assets/icons/` ont été régénérés
 - Les icônes s'affichent correctement dans l'application
@@ -60,6 +63,7 @@ npm run generate-all-icons
 ### Le script ne fonctionne pas
 
 1. Vérifiez que `sharp` est installé :
+
    ```bash
    npm install sharp
    ```
@@ -78,6 +82,7 @@ npm run generate-all-icons
 ### Besoin d'un fichier .ico
 
 Pour créer un vrai fichier `.ico` multi-taille, utilisez :
+
 - **ImageMagick** : `magick convert icon-96x96.png favicon.ico`
 - **En ligne** : https://realfavicongenerator.net/
 
@@ -86,4 +91,3 @@ Pour créer un vrai fichier `.ico` multi-taille, utilisez :
 - **Design** : Gardez le design simple et reconnaissable à petite taille
 - **Couleurs** : Utilisez des couleurs contrastées pour une meilleure visibilité
 - **Test** : Testez toujours les icônes à différentes tailles avant de déployer
-

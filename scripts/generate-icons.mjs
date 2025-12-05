@@ -39,7 +39,7 @@ try {
     await sharp.default(template)
       .resize(size, size, {
         fit: 'contain',
-        background: { r: 102, g: 126, b: 234, alpha: 1 } // #667eea
+        background: { r: 0, g: 0, b: 0, alpha: 1 } // #000000 (noir)
       })
       .png()
       .toFile(outputPath);

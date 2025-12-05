@@ -8,7 +8,7 @@ import { Round, RoundsData } from './models/round.model';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
     title = 'Fitboxing';
