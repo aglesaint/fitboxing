@@ -1,42 +1,90 @@
 {
-  "title": "293",
+  "title": "294",
   "rounds": [
     {
       "number": 1,
-      "title": "Round 1 - Fondamentaux",
-      "sequence": [
-        {
-          "move": "Jab",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
-          "timing": 1
-        },
-        {
-          "move": "Jab",
-          "timing": 2
-        },
-        {
-          "move": "Low Cross",
-          "timing": 2
-        },
-        {
-          "move": "Cross",
-          "timing": 1
-        }
-      ]
-    },
-    {
-      "number": 2,
-      "title": "Round 2 - Puissance et Kicks",
+      "title": "Round 1 - Hook & Slip",
       "sequence": [
         {
           "move": "Hook",
           "timing": 2
         },
         {
+          "move": "Hook",
+          "timing": 2
+        },
+        {
+          "move": "Slip",
+          "timing": 2
+        },
+        {
+          "move": "Hook",
+          "timing": 2
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "R2 - Puissance",
+      "sequence": [
+        {
+          "move": "Jab",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Jab",
+          "timing": 2
+        },
+        {
           "move": "Cross",
+          "timing": 2
+        },
+        {
+          "move": "Cross",
+          "timing": 2
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "R3 - Upper & Slip",
+      "sequence": [
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Slip",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 2
+        },
+        {
+          "move": "Upper",
+          "timing": 2
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "R4 - Combos",
+      "sequence": [
+        {
+          "move": "Check",
           "timing": 2
         },
         {
@@ -44,22 +92,8 @@
           "timing": 2
         },
         {
-          "move": "Hook",
-          "timing": 1
-        }
-      ]
-    },
-    {
-      "number": 3,
-      "title": "Round 3 - Variantes et Rythme",
-      "sequence": [
-        {
           "move": "Jab",
-          "timing": 2
-        },
-        {
-          "move": "Low Jab",
-          "timing": 2
+          "timing": 1
         },
         {
           "move": "Cross",
@@ -67,41 +101,7 @@
         },
         {
           "move": "Jab",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
-          "timing": 1
-        }
-      ]
-    },
-    {
-      "number": 4,
-      "title": "Round 4 - Uppercuts et Combos",
-      "sequence": [
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
           "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
         }
       ]
     }
