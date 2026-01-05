@@ -6,8 +6,8 @@
       "title": "R1 - Jab Cross Kick",
       "sequence": [
         {
-          "move": "Jab",
-          "timing": 1
+          "move": "Hook",
+          "timing": 2
         },
         {
           "move": "Cross",
@@ -62,7 +62,7 @@
       "title": "R4 - Variantes et Rythme",
       "sequence": [
         {
-          "move": "Cross",
+          "move": "Upper",
           "timing": 1
         },
         {
@@ -92,7 +92,7 @@
           "timing": 2
         },
         {
-          "move": "Upper",
+          "move": "Middle Kick",
           "timing": 2
         },
         {
