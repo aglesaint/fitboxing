@@ -1,9 +1,9 @@
 {
-  "title": "293",
+  "title": "295",
   "rounds": [
     {
       "number": 1,
-      "title": "Round 1 - Fondamentaux",
+      "title": "R1 - Jab Cross Kick",
       "sequence": [
         {
           "move": "Jab",
@@ -15,33 +15,41 @@
         },
         {
           "move": "Jab",
-          "timing": 2
-        },
-        {
-          "move": "Low Cross",
-          "timing": 2
+          "timing": 1
         },
         {
           "move": "Cross",
+          "timing": 2
+        },
+        {
+          "move": "Low Kick",
           "timing": 1
         }
       ]
     },
     {
       "number": 2,
-      "title": "Round 2 - Puissance et Kicks",
+      "title": "R2 - Upper et Hook",
       "sequence": [
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
         {
           "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Cross",
-          "timing": 2
+          "move": "Upper",
+          "timing": 1
         },
         {
-          "move": "Middle Kick",
-          "timing": 2
+          "move": "Upper",
+          "timing": 1
         },
         {
           "move": "Hook",
@@ -51,37 +59,37 @@
     },
     {
       "number": 3,
-      "title": "Round 3 - Variantes et Rythme",
+      "title": "R4 - Variantes et Rythme",
       "sequence": [
         {
-          "move": "Jab",
-          "timing": 2
-        },
-        {
-          "move": "Low Jab",
-          "timing": 2
-        },
-        {
           "move": "Cross",
           "timing": 1
         },
         {
-          "move": "Jab",
+          "move": "Upper",
           "timing": 1
         },
         {
           "move": "Cross",
+          "timing": 2
+        },
+        {
+          "move": "Step",
+          "timing": 2
+        },
+        {
+          "move": "Step",
           "timing": 1
         }
       ]
     },
     {
       "number": 4,
-      "title": "Round 4 - Uppercuts et Combos",
+      "title": "R5 - Hook",
       "sequence": [
         {
-          "move": "Upper",
-          "timing": 1
+          "move": "Hook",
+          "timing": 2
         },
         {
           "move": "Upper",
@@ -89,18 +97,10 @@
         },
         {
           "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
+          "move": "Hook",
           "timing": 1
         }
       ]
