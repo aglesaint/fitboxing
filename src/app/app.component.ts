@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
         }
     }
 
-    @HostListener('touchend', ['$event'])
+    @HostListener('touchend')
     onTouchEnd(): void {
         if (this.pullDistance >= this.PULL_THRESHOLD && !this.isLoading) {
             this.isRefreshing = true;
