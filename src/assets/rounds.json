@@ -1,9 +1,9 @@
 {
-  "title": "295",
+  "title": "296",
   "rounds": [
     {
       "number": 1,
-      "title": "R1 - Jab Cross Kick",
+      "title": "R1 - Jab Cross & Hook",
       "sequence": [
         {
           "move": "Jab",
@@ -11,25 +11,21 @@
         },
         {
           "move": "Cross",
-          "timing": 1
-        },
-        {
-          "move": "Jab",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
           "timing": 2
         },
         {
-          "move": "Low Kick",
+          "move": "Hook",
+          "timing": 2
+        },
+        {
+          "move": "Cross",
           "timing": 1
         }
       ]
     },
     {
       "number": 2,
-      "title": "R2 - Upper et Hook",
+      "title": "R2 - Upper & Hook",
       "sequence": [
         {
           "move": "Upper",
@@ -59,48 +55,52 @@
     },
     {
       "number": 3,
-      "title": "R4 - Variantes et Rythme",
+      "title": "R4 - Puissance kick",
       "sequence": [
         {
-          "move": "Cross",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
+          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Step",
+          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Step",
+          "move": "Jab",
+          "timing": 2
+        },
+        {
+          "move": "Middle Kick",
           "timing": 1
         }
       ]
     },
     {
       "number": 4,
-      "title": "R5 - Hook",
+      "title": "R5 - Mix",
       "sequence": [
         {
-          "move": "Hook",
+          "move": "Jab",
+          "timing": 1
+        },
+        {
+          "move": "Cross",
           "timing": 2
+        },
+        {
+          "move": "Jab",
+          "timing": 1
+        },
+        {
+          "move": "Cross",
+          "timing": 1
         },
         {
           "move": "Upper",
-          "timing": 2
+          "timing": 1
         },
         {
-          "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Hook",
+          "move": "Upper",
           "timing": 1
         }
       ]
