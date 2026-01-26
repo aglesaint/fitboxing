@@ -1,31 +1,31 @@
 {
-  "title": "296",
+  "title": "297",
   "rounds": [
     {
       "number": 1,
-      "title": "R1 - Jab Cross & Hook",
+      "title": "R1 - check & kick",
       "sequence": [
         {
+          "move": "Check",
+          "timing": 2
+        },
+        {
+          "move": "Low kick",
+          "timing": 2
+        },
+        {
+          "move": "Cross",
+          "timing": 2
+        },
+        {
           "move": "Jab",
-          "timing": 2
-        },
-        {
-          "move": "Cross",
-          "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Cross",
           "timing": 1
         }
       ]
     },
     {
       "number": 2,
-      "title": "R2 - Upper & Hook",
+      "title": "R2 - Upper & Cross",
       "sequence": [
         {
           "move": "Upper",
@@ -33,29 +33,25 @@
         },
         {
           "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Upper",
+          "move": "Cross",
           "timing": 1
         },
         {
-          "move": "Upper",
-          "timing": 1
+          "move": "Jab",
+          "timing": 2
         },
         {
-          "move": "Hook",
+          "move": "Cross",
           "timing": 1
         }
       ]
     },
     {
       "number": 3,
-      "title": "R4 - Puissance kick",
+      "title": "R4 - Hook & jab",
       "sequence": [
         {
           "move": "Hook",
@@ -67,32 +63,36 @@
         },
         {
           "move": "Jab",
-          "timing": 2
+          "timing": 1
         },
         {
-          "move": "Middle Kick",
+          "move": "Cross",
+          "timing": 1
+        },
+        {
+          "move": "Jab",
           "timing": 1
         }
       ]
     },
     {
       "number": 4,
-      "title": "R5 - Mix",
+      "title": "R5 - Mix Upper",
       "sequence": [
         {
-          "move": "Jab",
+          "move": "Cross",
           "timing": 1
         },
         {
-          "move": "Cross",
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
           "timing": 2
         },
         {
           "move": "Jab",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
           "timing": 1
         },
         {
