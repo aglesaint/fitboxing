@@ -5,6 +5,7 @@ export interface Move {
 
 export interface Round {
     number: number;
+    round: string;
     title: string;
     sequence: Move[];
 }
