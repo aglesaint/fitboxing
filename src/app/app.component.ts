@@ -1,92 +1,121 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef, signal, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoundsService } from './services/rounds.service';
 import { Round, RoundsData } from './models/round.model';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    imports: [CommonModule],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
-    title = 'Fitboxing';
-    sessionTitle: string = '';
-    challenges: Round[] = [];
+export class AppComponent implements OnInit, OnDestroy {
+  @ViewChild('scrollContainer', { static: true }) containerRef!: ElementRef<HTMLDivElement>;
+  title = 'Fitboxing';
+  // --- State signals ---
+  sessionTitle = signal('');
+  challenges = signal<Round[]>([]);
+  isRefreshing = signal(false);
+  isLoading = signal(false);
+  pullDistance = signal(0);
+  isPulling = signal(false);
 
-    // État du pull-to-refresh
-    isRefreshing = false;
-    isLoading = false; // Flag pour empêcher les requêtes concurrentes
-    pullDistance = 0;
-    startY = 0;
-    isPulling = false;
-    readonly PULL_THRESHOLD = 80; // Distance minimale pour déclencher le refresh
+  readonly PULL_THRESHOLD = 80;
+  private startY = 0;
 
-    constructor(private roundsService: RoundsService) { }
+  constructor(private roundsService: RoundsService) { }
 
-    ngOnInit(): void {
-        this.loadData();
+  ngOnInit(): void {
+    this.loadData();
+
+    // Bloque le pull-to-refresh Safari
+    document.addEventListener('touchmove', this.preventPullToRefresh, { passive: false });
+
+    // Optionnel : effet pour reset pullDistance automatiquement si scroll remonté
+    effect(() => {
+      if (this.pullDistance() === 0 && this.isPulling()) {
+        this.isPulling.set(false);
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    document.removeEventListener('touchmove', this.preventPullToRefresh);
+  }
+
+  // Empêche le refresh Safari
+  preventPullToRefresh = (e: TouchEvent) => {
+    const atTop = this.containerRef?.nativeElement.scrollTop === 0;
+    if (atTop && this.pullDistance() > 0) {
+      e.preventDefault();
     }
+  };
 
-    loadData(): void {
-        // Empêcher les requêtes concurrentes
-        if (this.isLoading) {
-            return;
-        }
-
-        // Marquer comme en cours de chargement
-        this.isLoading = true;
-
-        this.roundsService.getAllRoundsData().subscribe({
-            next: (data: RoundsData) => {
-                this.sessionTitle = data.title;
-                this.challenges = data.rounds;
-                this.isRefreshing = false;
-                this.isLoading = false;
-                this.pullDistance = 0;
-            },
-            error: (error) => {
-                console.error('Error loading data:', error);
-                this.isRefreshing = false;
-                this.isLoading = false;
-                this.pullDistance = 0;
-            }
-        });
+  // --- Pull-to-refresh handlers ---
+  onTouchStart(event: TouchEvent) {
+    if (this.containerRef.nativeElement.scrollTop === 0 && !this.isLoading()) {
+      this.startY = event.touches[0].clientY;
+      this.isPulling.set(true);
     }
+  }
 
-    @HostListener('touchstart', ['$event'])
-    onTouchStart(event: TouchEvent): void {
-        if (window.scrollY === 0) {
-            this.startY = event.touches[0].clientY;
-            this.isPulling = true;
-        }
+  onTouchMove(event: TouchEvent) {
+    if (!this.isPulling() || this.isLoading()) return;
+
+    const currentY = event.touches[0].clientY;
+    const deltaY = currentY - this.startY;
+    const atTop = this.containerRef.nativeElement.scrollTop === 0;
+
+    if (deltaY > 0 && atTop) {
+      event.preventDefault();
+      this.pullDistance.set(Math.min(deltaY * 0.5, this.PULL_THRESHOLD * 1.5));
+
+      // petit feedback haptique
+      if (this.pullDistance() >= this.PULL_THRESHOLD && 'vibrate' in navigator) {
+        navigator.vibrate(10);
+      }
+    } else {
+      this.resetPullState();
     }
+  }
 
-    @HostListener('touchmove', ['$event'])
-    onTouchMove(event: TouchEvent): void {
-        if (!this.isPulling || this.isLoading) return;
-
-        const currentY = event.touches[0].clientY;
-        const deltaY = currentY - this.startY;
-
-        if (deltaY > 0 && window.scrollY === 0) {
-            event.preventDefault();
-            this.pullDistance = Math.min(deltaY * 0.5, this.PULL_THRESHOLD * 1.5);
-        } else {
-            this.isPulling = false;
-            this.pullDistance = 0;
-        }
+  onTouchEnd() {
+    if (this.pullDistance() >= this.PULL_THRESHOLD && !this.isLoading()) {
+      this.isRefreshing.set(true);
+      this.loadData();
+    } else {
+      this.pullDistance.set(0);
     }
+    this.isPulling.set(false);
+  }
 
-    @HostListener('touchend')
-    onTouchEnd(): void {
-        if (this.pullDistance >= this.PULL_THRESHOLD && !this.isLoading) {
-            this.isRefreshing = true;
-            this.loadData();
-        } else {
-            this.pullDistance = 0;
-        }
-        this.isPulling = false;
-    }
+  // --- Data loader ---
+  loadData() {
+    if (this.isLoading()) return;
+
+    this.isLoading.set(true);
+
+    this.roundsService.getAllRoundsData().subscribe({
+      next: (data: RoundsData) => {
+        this.sessionTitle.set(data.title);
+        this.challenges.set(data.rounds);
+        this.resetPullState();
+      },
+      error: (err) => {
+        console.error('Error loading data', err);
+        this.resetPullState();
+      }
+    });
+  }
+
+  private resetPullState() {
+    this.isRefreshing.set(false);
+    this.isLoading.set(false);
+    this.pullDistance.set(0);
+    this.isPulling.set(false);
+  }
+
+  // --- Computed for template ---
+  pullActive = computed(() => this.pullDistance() >= this.PULL_THRESHOLD);
 }

@@ -3,7 +3,8 @@
   "rounds": [
     {
       "number": 1,
-      "title": "R1 - check & kick",
+      "round": "R1",
+      "title": "check & kick",
       "sequence": [
         {
           "move": "Check",
@@ -25,7 +26,8 @@
     },
     {
       "number": 2,
-      "title": "R2 - Upper & Cross",
+      "round": "R2",
+      "title": "Upper & Cross",
       "sequence": [
         {
           "move": "Upper",
@@ -51,7 +53,8 @@
     },
     {
       "number": 3,
-      "title": "R4 - Hook & jab",
+      "round": "R4",
+      "title": "Hook & jab",
       "sequence": [
         {
           "move": "Hook",
@@ -77,7 +80,8 @@
     },
     {
       "number": 4,
-      "title": "R5 - Mix Upper",
+      "round": "R5",
+      "title": "Mix Upper",
       "sequence": [
         {
           "move": "Cross",
