@@ -1,22 +1,26 @@
 {
-  "title": "297",
+  "title": "298",
   "rounds": [
     {
       "number": 1,
       "round": "R1",
-      "title": "check & kick",
+      "title": "Hook",
       "sequence": [
         {
-          "move": "Check",
+          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Low kick",
+          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Cross",
-          "timing": 2
+          "move": "Jab",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
+          "timing": 1
         },
         {
           "move": "Jab",
@@ -27,54 +31,54 @@
     {
       "number": 2,
       "round": "R2",
-      "title": "Upper & Cross",
+      "title": "Upper & Hook",
       "sequence": [
         {
+          "move": "Slip",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
           "move": "Upper",
           "timing": 1
         },
         {
           "move": "Upper",
-          "timing": 2
-        },
-        {
-          "move": "Cross",
           "timing": 1
         },
         {
-          "move": "Jab",
+          "move": "Hook",
           "timing": 2
         },
         {
-          "move": "Cross",
-          "timing": 1
+          "move": "Hook",
+          "timing": 2
         }
       ]
     },
     {
       "number": 3,
       "round": "R4",
-      "title": "Hook & jab",
+      "title": "Jab & Kick",
       "sequence": [
         {
-          "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Jab",
-          "timing": 1
-        },
-        {
           "move": "Cross",
-          "timing": 1
+          "timing": 2
         },
         {
           "move": "Jab",
-          "timing": 1
+          "timing": 2
+        },
+        {
+          "move": "Low Kick",
+          "timing": 2
+        },
+        {
+          "move": "Jab",
+          "timing": 2
         }
       ]
     },
@@ -84,15 +88,15 @@
       "title": "Mix Upper",
       "sequence": [
         {
-          "move": "Cross",
-          "timing": 1
-        },
-        {
           "move": "Upper",
           "timing": 1
         },
         {
           "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
           "timing": 2
         },
         {
@@ -100,12 +104,8 @@
           "timing": 1
         },
         {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
+          "move": "Cross",
+          "timing": 2
         }
       ]
     }
