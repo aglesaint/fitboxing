@@ -2,10 +2,21 @@
 
 .container {
     max-width: $max-width-container;
+    height: 100dvh; // hauteur plein écran (dvh gère la barre d'URL mobile)
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom, 24px); // gère le notch iOS en bonusgit 
     transition: transform $transition-normal ease;
+
+    // Cache l'ascenseur sur tous les navigateurs
+    scrollbar-width: none;          // Firefox
+    -ms-overflow-style: none;       // IE / Edge legacy
+    &::-webkit-scrollbar {
+        display: none;              // Chrome / Safari / Opera
+    }
 
     &.refreshing {
         pointer-events: none;
