@@ -3,7 +3,8 @@
   "rounds": [
     {
       "number": 1,
-      "title": "Round 1 - Fondamentaux",
+      "round": "R1",
+      "title": "Fondamentaux",
       "sequence": [
         {
           "move": "Jab",
@@ -25,7 +26,8 @@
     },
     {
       "number": 2,
-      "title": "Round 2 - Puissance & Upper",
+      "round": "R2",
+      "title": "Puissance & Upper",
       "sequence": [
         {
           "move": "Upper",
@@ -55,7 +57,8 @@
     },
     {
       "number": 3,
-      "title": "Round 3 - Jab & Kick",
+      "round": "R3",
+      "title": "Jab & Kick",
       "sequence": [
         {
           "move": "Jab",
@@ -81,7 +84,8 @@
     },
     {
       "number": 4,
-      "title": "Round 4 - 3 Uppers & 3 Hooks",
+      "round": "R4",
+      "title": "3 Uppers & 3 Hooks",
       "sequence": [
         {
           "move": "Upper",
