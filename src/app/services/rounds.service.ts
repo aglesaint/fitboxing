@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Round, RoundsData } from '../models/round.model';
@@ -13,7 +13,16 @@ export class RoundsService {
     constructor(private http: HttpClient) { }
 
     getAllRoundsData(): Observable<RoundsData> {
-        return this.http.get<RoundsData>(this.roundsJsonPath);
+        // Timestamp en query param → contourne le cache SW et le cache HTTP
+        const cacheBuster = `?v=${Date.now()}`;
+    
+        const headers = new HttpHeaders({
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        });
+    
+        return this.http.get<RoundsData>(`${this.roundsJsonPath}${cacheBuster}`, { headers });
     }
 
     getRounds(): Observable<Round[]> {
