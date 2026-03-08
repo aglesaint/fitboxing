@@ -1,48 +1,38 @@
 {
-  "title": "298",
+  "title": "300",
   "rounds": [
     {
       "number": 1,
-      "round": "R1",
-      "title": "Hook",
+      "title": "Round 1 - Fondamentaux",
       "sequence": [
         {
-          "move": "Hook",
+          "move": "Jab",
+          "timing": 2
+        },
+        {
+          "move": "Cross",
           "timing": 2
         },
         {
           "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Jab",
           "timing": 1
         },
         {
           "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Jab",
-          "timing": 1
+          "timing": 2
         }
       ]
     },
     {
       "number": 2,
-      "round": "R2",
-      "title": "Upper & Hook",
+      "title": "Round 2 - Puissance & Upper",
       "sequence": [
         {
-          "move": "Slip",
-          "timing": 1
-        },
-        {
           "move": "Upper",
           "timing": 1
         },
         {
-          "move": "Upper",
+          "move": "Hook",
           "timing": 1
         },
         {
@@ -51,22 +41,29 @@
         },
         {
           "move": "Hook",
+          "timing": 1
+        },
+        {
+          "move": "Slip",
           "timing": 2
         },
         {
-          "move": "Hook",
+          "move": "Upper",
           "timing": 2
         }
       ]
     },
     {
       "number": 3,
-      "round": "R4",
-      "title": "Jab & Kick",
+      "title": "Round 3 - Jab & Kick",
       "sequence": [
         {
+          "move": "Jab",
+          "timing": 1
+        },
+        {
           "move": "Cross",
-          "timing": 2
+          "timing": 1
         },
         {
           "move": "Jab",
@@ -84,8 +81,7 @@
     },
     {
       "number": 4,
-      "round": "R5",
-      "title": "Mix Upper",
+      "title": "Round 4 - 3 Uppers & 3 Hooks",
       "sequence": [
         {
           "move": "Upper",
@@ -96,15 +92,19 @@
           "timing": 1
         },
         {
-          "move": "Hook",
+          "move": "Upper",
           "timing": 2
         },
         {
-          "move": "Jab",
+          "move": "Hook",
           "timing": 1
         },
         {
-          "move": "Cross",
+          "move": "Hook",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
           "timing": 2
         }
       ]
