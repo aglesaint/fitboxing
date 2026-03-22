@@ -1,17 +1,17 @@
 {
-  "title": "300",
+  "title": "301",
   "rounds": [
     {
       "number": 1,
       "round": "R1",
-      "title": "Fondamentaux",
+      "title": "Upper & Hook",
       "sequence": [
         {
-          "move": "Jab",
+          "move": "Upper",
           "timing": 2
         },
         {
-          "move": "Cross",
+          "move": "Upper",
           "timing": 2
         },
         {
@@ -20,45 +20,18 @@
         },
         {
           "move": "Hook",
-          "timing": 2
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
         }
       ]
     },
     {
       "number": 2,
       "round": "R2",
-      "title": "Puissance & Upper",
-      "sequence": [
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Slip",
-          "timing": 2
-        },
-        {
-          "move": "Upper",
-          "timing": 2
-        }
-      ]
-    },
-    {
-      "number": 3,
-      "round": "R3",
-      "title": "Jab & Kick",
+      "title": "Jab Cross Upper & Hook",
       "sequence": [
         {
           "move": "Jab",
@@ -69,7 +42,57 @@
           "timing": 1
         },
         {
-          "move": "Jab",
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
+          "timing": 2
+        },
+        {
+          "move": "Hook",
+          "timing": 1
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "round": "R4",
+      "title": "Weave",
+      "sequence": [
+        {
+          "move": "Hook",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 2
+        },
+        {
+          "move": "Weave",
+          "timing": 2
+        },
+        {
+          "move": "Hook",
+          "timing": 1
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "round": "R5",
+      "title": "Cross & Kick",
+      "sequence": [
+        {
+          "move": "Cross",
           "timing": 2
         },
         {
@@ -77,39 +100,12 @@
           "timing": 2
         },
         {
+          "move": "Hook",
+          "timing": 2
+        },
+        {
           "move": "Jab",
-          "timing": 2
-        }
-      ]
-    },
-    {
-      "number": 4,
-      "round": "R4",
-      "title": "3 Uppers & 3 Hooks",
-      "sequence": [
-        {
-          "move": "Upper",
           "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 2
         }
       ]
     }
