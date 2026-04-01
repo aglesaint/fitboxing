@@ -29,14 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private boundTouchMove  = (e: TouchEvent) => this.onTouchMove(e);
   private boundTouchEnd   = ()              => this.onTouchEnd();
 
-  constructor(private roundsService: RoundsService) {
-    // ✅ effect() doit être dans le constructeur (injection context requis)
-    effect(() => {
-      if (this.pullDistance() === 0 && this.isPulling()) {
-        this.isPulling.set(false);
-      }
-    });
-  }
+  constructor(private roundsService: RoundsService) {}
 
   ngOnInit(): void {
     this.loadData();
@@ -73,10 +66,6 @@ export class AppComponent implements OnInit, OnDestroy {
     if (deltaY > 0 && atTop) {
       event.preventDefault(); // ✅ fonctionne car listener non-passif
       this.pullDistance.set(Math.min(deltaY * 0.5, this.PULL_THRESHOLD * 1.5));
-
-      if (this.pullDistance() >= this.PULL_THRESHOLD && 'vibrate' in navigator) {
-        navigator.vibrate(10);
-      }
     } else {
       this.resetPullState();
     }
@@ -110,10 +99,13 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private resetPullState() {
-    this.isRefreshing.set(false);
-    this.isLoading.set(false);
-    this.pullDistance.set(0);
-    this.isPulling.set(false);
+    const delay = this.isRefreshing() ? 600 : 0;
+    setTimeout(() => {
+      this.isRefreshing.set(false);
+      this.isLoading.set(false);
+      this.pullDistance.set(0);
+      this.isPulling.set(false);
+    }, delay);
   }
 
   pullActive = computed(() => this.pullDistance() >= this.PULL_THRESHOLD);
