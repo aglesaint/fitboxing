@@ -12,8 +12,8 @@ import { Round, RoundsData } from './models/round.model';
 })
 export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('scrollContainer', { static: true }) containerRef!: ElementRef<HTMLDivElement>;
+
   title = 'Fitboxing';
-  // --- State signals ---
   sessionTitle = signal('');
   challenges = signal<Round[]>([]);
   isRefreshing = signal(false);
@@ -24,15 +24,13 @@ export class AppComponent implements OnInit, OnDestroy {
   readonly PULL_THRESHOLD = 80;
   private startY = 0;
 
-  constructor(private roundsService: RoundsService) { }
+  // ✅ Flèches pour conserver le contexte "this" lors du removeEventListener
+  private boundTouchStart = (e: TouchEvent) => this.onTouchStart(e);
+  private boundTouchMove  = (e: TouchEvent) => this.onTouchMove(e);
+  private boundTouchEnd   = ()              => this.onTouchEnd();
 
-  ngOnInit(): void {
-    this.loadData();
-
-    // Bloque le pull-to-refresh Safari
-    document.addEventListener('touchmove', this.preventPullToRefresh, { passive: false });
-
-    // Optionnel : effet pour reset pullDistance automatiquement si scroll remonté
+  constructor(private roundsService: RoundsService) {
+    // ✅ effect() doit être dans le constructeur (injection context requis)
     effect(() => {
       if (this.pullDistance() === 0 && this.isPulling()) {
         this.isPulling.set(false);
@@ -40,19 +38,24 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
-    document.removeEventListener('touchmove', this.preventPullToRefresh);
+  ngOnInit(): void {
+    this.loadData();
+
+    const el = this.containerRef.nativeElement;
+
+    // ✅ Enregistrement manuel NON-PASSIF → preventDefault() fonctionnera sur iOS
+    el.addEventListener('touchstart', this.boundTouchStart, { passive: true });
+    el.addEventListener('touchmove',  this.boundTouchMove,  { passive: false });
+    el.addEventListener('touchend',   this.boundTouchEnd,   { passive: true });
   }
 
-  // Empêche le refresh Safari
-  preventPullToRefresh = (e: TouchEvent) => {
-    const atTop = this.containerRef?.nativeElement.scrollTop === 0;
-    if (atTop && this.pullDistance() > 0) {
-      e.preventDefault();
-    }
-  };
+  ngOnDestroy(): void {
+    const el = this.containerRef.nativeElement;
+    el.removeEventListener('touchstart', this.boundTouchStart);
+    el.removeEventListener('touchmove',  this.boundTouchMove);
+    el.removeEventListener('touchend',   this.boundTouchEnd);
+  }
 
-  // --- Pull-to-refresh handlers ---
   onTouchStart(event: TouchEvent) {
     if (this.containerRef.nativeElement.scrollTop === 0 && !this.isLoading()) {
       this.startY = event.touches[0].clientY;
@@ -64,14 +67,13 @@ export class AppComponent implements OnInit, OnDestroy {
     if (!this.isPulling() || this.isLoading()) return;
 
     const currentY = event.touches[0].clientY;
-    const deltaY = currentY - this.startY;
-    const atTop = this.containerRef.nativeElement.scrollTop === 0;
+    const deltaY   = currentY - this.startY;
+    const atTop    = this.containerRef.nativeElement.scrollTop === 0;
 
     if (deltaY > 0 && atTop) {
-      event.preventDefault();
+      event.preventDefault(); // ✅ fonctionne car listener non-passif
       this.pullDistance.set(Math.min(deltaY * 0.5, this.PULL_THRESHOLD * 1.5));
 
-      // petit feedback haptique
       if (this.pullDistance() >= this.PULL_THRESHOLD && 'vibrate' in navigator) {
         navigator.vibrate(10);
       }
@@ -90,10 +92,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.isPulling.set(false);
   }
 
-  // --- Data loader ---
   loadData() {
     if (this.isLoading()) return;
-
     this.isLoading.set(true);
 
     this.roundsService.getAllRoundsData().subscribe({
@@ -116,6 +116,5 @@ export class AppComponent implements OnInit, OnDestroy {
     this.isPulling.set(false);
   }
 
-  // --- Computed for template ---
   pullActive = computed(() => this.pullDistance() >= this.PULL_THRESHOLD);
 }
