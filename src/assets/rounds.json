@@ -1,48 +1,44 @@
 {
-  "title": "301",
+  "title": "302",
   "rounds": [
     {
       "number": 1,
       "round": "R1",
-      "title": "Upper & Hook",
+      "title": "Jab & Cross",
       "sequence": [
         {
-          "move": "Upper",
+          "move": "Jab",
           "timing": 2
         },
         {
-          "move": "Upper",
+          "move": "Cross",
           "timing": 2
         },
         {
-          "move": "Hook",
-          "timing": 1
+          "move": "Rock Back",
+          "timing": 2
         },
         {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
+          "move": "Cross",
+          "timing": 2
         }
       ]
     },
     {
       "number": 2,
       "round": "R2",
-      "title": "Jab Cross Upper & Hook",
+      "title": "Hook & Upper",
       "sequence": [
         {
-          "move": "Jab",
-          "timing": 1
-        },
-        {
-          "move": "Cross",
+          "move": "Hook",
           "timing": 1
         },
         {
           "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
           "timing": 1
         },
         {
@@ -62,49 +58,53 @@
     {
       "number": 3,
       "round": "R4",
-      "title": "Weave",
+      "title": "Check & Kick",
       "sequence": [
         {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
+          "move": "Check",
           "timing": 2
         },
         {
-          "move": "Weave",
+          "move": "Middle Kick",
           "timing": 2
         },
         {
-          "move": "Hook",
+          "move": "Jab",
           "timing": 1
+        },
+        {
+          "move": "Cross",
+          "timing": 1
+        },
+        {
+          "move": "Jab",
+          "timing": 2
         }
       ]
     },
     {
       "number": 4,
       "round": "R5",
-      "title": "Cross & Kick",
+      "title": "Cross & Upper",
       "sequence": [
         {
           "move": "Cross",
           "timing": 2
         },
         {
-          "move": "Low Kick",
+          "move": "Cross",
           "timing": 2
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
         },
         {
           "move": "Hook",
-          "timing": 2
-        },
-        {
-          "move": "Jab",
           "timing": 1
         }
       ]
