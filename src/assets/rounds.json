@@ -1,5 +1,5 @@
 {
-  "title": "302",
+  "title": "304",
   "rounds": [
     {
       "number": 1,
@@ -8,10 +8,14 @@
       "sequence": [
         {
           "move": "Jab",
-          "timing": 2
+          "timing": 1
         },
         {
           "move": "Cross",
+          "timing": 1
+        },
+        {
+          "move": "Jab",
           "timing": 2
         },
         {
@@ -27,18 +31,18 @@
     {
       "number": 2,
       "round": "R2",
-      "title": "Hook & Upper",
+      "title": "Upper",
       "sequence": [
         {
-          "move": "Hook",
-          "timing": 1
+          "move": "Upper",
+          "timing": 2
         },
         {
           "move": "Upper",
-          "timing": 1
+          "timing": 2
         },
         {
-          "move": "Hook",
+          "move": "Upper",
           "timing": 1
         },
         {
@@ -48,36 +52,32 @@
         {
           "move": "Hook",
           "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 1
         }
       ]
     },
     {
       "number": 3,
       "round": "R4",
-      "title": "Check & Kick",
+      "title": "Rock back",
       "sequence": [
         {
-          "move": "Check",
+          "move": "Rock back",
           "timing": 2
         },
         {
-          "move": "Middle Kick",
-          "timing": 2
+          "move": "Hook",
+          "timing": 1
         },
         {
-          "move": "Jab",
+          "move": "Hook",
           "timing": 1
         },
         {
           "move": "Cross",
-          "timing": 1
+          "timing": 2
         },
         {
-          "move": "Jab",
+          "move": "Hook",
           "timing": 2
         }
       ]
@@ -85,10 +85,14 @@
     {
       "number": 4,
       "round": "R5",
-      "title": "Cross & Upper",
+      "title": "Step",
       "sequence": [
         {
-          "move": "Cross",
+          "move": "Step",
+          "timing": 2
+        },
+        {
+          "move": "Step",
           "timing": 2
         },
         {
@@ -97,15 +101,7 @@
         },
         {
           "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
-          "timing": 1
+          "timing": 2
         }
       ]
     }
