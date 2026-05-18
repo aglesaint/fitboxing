@@ -4,104 +4,112 @@
     {
       "number": 1,
       "round": "R1",
-      "title": "Jab & Cross",
+      "title": "Jab & Low Cross",
       "sequence": [
         {
           "move": "Jab",
-          "timing": 1
+          "timing": 2
         },
         {
-          "move": "Cross",
-          "timing": 1
+          "move": "Low Cross",
+          "timing": 2
         },
         {
           "move": "Jab",
           "timing": 2
         },
         {
-          "move": "Rock Back",
-          "timing": 2
-        },
-        {
           "move": "Cross",
-          "timing": 2
+          "timing": 1
         }
       ]
     },
     {
       "number": 2,
       "round": "R2",
-      "title": "Upper",
+      "title": "Weave",
       "sequence": [
         {
-          "move": "Upper",
+          "move": "Weave",
           "timing": 2
         },
         {
-          "move": "Upper",
-          "timing": 2
-        },
-        {
-          "move": "Upper",
-          "timing": 1
-        },
-        {
-          "move": "Upper",
+          "move": "Hook",
           "timing": 1
         },
         {
           "move": "Hook",
-          "timing": 2
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Upper",
+          "timing": 1
         }
       ]
     },
     {
       "number": 3,
       "round": "R4",
-      "title": "Rock back",
+      "title": "Jab & Middle Kick",
       "sequence": [
         {
-          "move": "Rock back",
-          "timing": 2
-        },
-        {
-          "move": "Hook",
-          "timing": 1
-        },
-        {
-          "move": "Hook",
+          "move": "Jab",
           "timing": 1
         },
         {
           "move": "Cross",
+          "timing": 1
+        },
+        {
+          "move": "Jab",
           "timing": 2
         },
         {
-          "move": "Hook",
+          "move": "Middle Kick",
           "timing": 2
+        },
+        {
+          "move": "Jab",
+          "timing": 1
         }
       ]
     },
     {
       "number": 4,
       "round": "R5",
-      "title": "Step",
+      "title": "Upper & Hook",
       "sequence": [
         {
-          "move": "Step",
-          "timing": 2
+          "move": "Upper",
+          "timing": 1
         },
         {
-          "move": "Step",
-          "timing": 2
-        },
-        {
-          "move": "Cross",
-          "timing": 2
+          "move": "Hook",
+          "timing": 1
         },
         {
           "move": "Upper",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
+          "timing": 1
+        },
+        {
+          "move": "Hook",
           "timing": 2
+        },
+        {
+          "move": "Hook",
+          "timing": 1
         }
       ]
     }
